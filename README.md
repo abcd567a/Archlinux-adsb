@@ -14,7 +14,8 @@ makepkg -si
 ```
 
 </br>
-The command `makepkg -si ` will run the PKGBUILD script which will: </br>
+
+The command `makepkg -si` will run the PKGBUILD script which will: </br>
 
 1. Check for conflicts with existing other versions of dump1090 </br>
 2. Check Build tools needed (git, make, gcc, pkgconf, binutils, and fakeroot), and will offer to install missing tools [Yes/no]. </br> 
