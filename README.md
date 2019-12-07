@@ -45,10 +45,10 @@ and a rotating wheel will appear on map, or map will not show
 2. In the opened file, go to following line:
     RECEIVER_OPTIONS="--device-index 0 --gain -10 --ppm 0 --net-bo-port 30005"
     In above line, add your latitude and longitude, so the line becomes like below:
-    RECEIVER_OPTIONS="--device-index 0 --gain -10 --lat xx.xxxx --lon yy.yyyy --ppm 0 --net-bo-port 30005"
+    RECEIVER_OPTIONS="--device-index 0 --gain -10 --lat xx.xxxx --lon yy.yyyy --ppm 0 --net-bo-port 30005" </br>
     NOTE: Repalce xx.xxxx and yy.yyyy by your actual latitude and Longitude
 
-3. Restart dump1090-fa
+3. Restart dump1090-fa </br>
 
     `sudo systemctl restart dump1090-fa `
 
