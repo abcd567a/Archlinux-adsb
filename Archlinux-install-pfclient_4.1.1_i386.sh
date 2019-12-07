@@ -10,7 +10,8 @@ sudo tar zxvf  ${RESOURCE_FOLDER}/${BINARY_VERSION}.tar.gz -C ${RESOURCE_FOLDER}
 sudo cp ${RESOURCE_FOLDER}/pfclient /usr/bin/pfclient
 
 echo "installing lib32-glibc needed by pfclient i386 binary"
-sudo pacman -S lib32-glibc --needed
+sudo pacman -Syu lib32-glibc --needed
+sudo pacman -Syu lib32-gcc-libs --needed
 echo "updating ldconfig"
 sudo ldconfig
 
