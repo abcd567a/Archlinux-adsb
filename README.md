@@ -69,7 +69,7 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-a
 
 </br></br>
 
-## STEP 3 of 3: Install Planefinder feeder on Arch Linux:</br>
+## STEP 3 of 3: Install Planefinder feeder:</br>
 
 ```
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/Archlinux-install-pfclient_4.1.1_i386.sh)"
