@@ -1,8 +1,9 @@
 #!/bin/bash
 
-INSTALL_FOLDER=/usr/share/fr24
+INSTALL_FOLDER=/usr/share/fr24feed
 VERSION="1.0.25-3"
-echo "Creating folder fr24"
+
+echo "Creating folder fr24feed"
 sudo mkdir ${INSTALL_FOLDER}
 echo "Downloading fr24feed amd64 binary file from Flightradar24"
 sudo wget -O ${INSTALL_FOLDER}/fr24feed_${VERSION}_amd64.tgz "https://repo-feed.flightradar24.com/linux_x86_64_binaries/fr24feed_${VERSION}_amd64.tgz"
