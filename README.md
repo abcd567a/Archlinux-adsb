@@ -58,13 +58,13 @@ and a rotating wheel will appear on map, or map will not show
 ## STEP 2 of 3: Install FlightRadar24 feeder </br>
 
 ```
-## Option 1: fr24feed_1.0.24-5_i386
-sudo pacman -S --needed wget
-sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/ArchLinux-install-fr24feed_1.0.24-5_i386.sh)"
+## Option 1: fr24feed_1.0.25-3_amd64
+sudo pacman -Sy --needed wget
+sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/ArchLinux-install-fr24feed_amd64.sh)"
 
-## Option 2: fr24feed_1.0.18-5_amd64
-sudo pacman -S --needed wget
-sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/ArchLinux-install-fr24feed_1.0.18-5_amd64.sh)"
+## Option 2: fr24feed_1.0.25-3_i386
+sudo pacman -Sy --needed wget
+sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/ArchLinux-install-fr24feed_i386.sh)"
 ``` 
 
 </br></br>
@@ -72,6 +72,7 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-a
 ## STEP 3 of 3: Install Planefinder feeder:</br>
 
 ```
+sudo pacman -Sy --needed wget
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/Archlinux-install-pfclient_4.1.1_i386.sh)"
 ``` 
 
