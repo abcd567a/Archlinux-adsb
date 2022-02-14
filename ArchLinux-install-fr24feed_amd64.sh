@@ -1,16 +1,14 @@
 #!/bin/bash
 
-INSTALL_FOLDER=/usr/share/fr24feed
-VERSION="1.0.25-3"
+TARBALL=fr24feed_1.0.25-3_amd64.tgz
+RESOURCE_FOLDER=/usr/share/fr24feed
+sudo mkdir ${RESOURCE_FOLDER}
+echo "Downloading Tarball" ${TARBALL} "for amd64 from Flightradar24"
+sudo wget -O ${RESOURCE_FOLDER}/${TARBALL} "https://repo-feed.flightradar24.com/linux_x86_64_binaries/${TARBALL}"
 
-echo "Creating folder fr24feed"
-sudo mkdir ${INSTALL_FOLDER}
-echo "Downloading fr24feed amd64 binary file from Flightradar24"
-sudo wget -O ${INSTALL_FOLDER}/fr24feed_${VERSION}_amd64.tgz "https://repo-feed.flightradar24.com/linux_x86_64_binaries/fr24feed_${VERSION}_amd64.tgz"
+sudo bsdtar -xvpf ${RESOURCE_FOLDER}/${TARBALL} -C ${RESOURCE_FOLDER}
 
-echo "Unzipping downloaded file"
-sudo tar xvzf ${INSTALL_FOLDER}/fr24feed_${VERSION}_amd64.tgz -C ${INSTALL_FOLDER}
-sudo cp ${INSTALL_FOLDER}/fr24feed_amd64/fr24feed /usr/bin/
+sudo cp ${RESOURCE_FOLDER}/fr24feed_amd64/fr24feed /usr/bin/
 
 echo "Creating config file fr24feed.ini"
 CONFIG_FILE=/etc/fr24feed.ini
@@ -18,20 +16,16 @@ sudo touch ${CONFIG_FILE}
 sudo chmod 777 ${CONFIG_FILE}
 echo "Writing code to config file fr24feed.ini"
 /bin/cat <<EOM >${CONFIG_FILE}
-receiver="beast-tcp"
-host="127.0.0.1:30005"
+receiver="avr-tcp"
+host="127.0.0.1:30002"
 fr24key=""
 
 bs="no"
 raw="no"
 logmode="1"
-logpath="/var/log/fr24feed/"
-windowmode="0"
-mpx="no"
-mlat="no"
+logpath="/var/log/fr24feed"
+mlat="yes"
 mlat-without-gps="yes"
-use-http=yes
-http-timeout=20
 
 EOM
 
@@ -87,7 +81,7 @@ echo -e "\e[39m           sudo systemctl restart fr24feed \e[39m"
 echo " "
 
 echo -e "\e[32m   (b) Alternatively signup using following command\e[39m"
-echo -e "\e[39m         sudo fr24feed --signup \e[39m"
+echo -e "\e[39m         sudo nano fr24feed --signup \e[39m"
 echo " "
 echo -e "\e[32m(2) In your browser, go to web interface at\e[39m"
 echo -e "\e[39m     http://$(ip route | grep -m1 -o -P 'src \K[0-9,.]*'):8754 \e[39m"
