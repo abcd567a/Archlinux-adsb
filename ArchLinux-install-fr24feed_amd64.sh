@@ -4,6 +4,7 @@ TARBALL=fr24feed_1.0.25-3_amd64.tgz
 RESOURCE_FOLDER=/usr/share/fr24feed
 sudo mkdir ${RESOURCE_FOLDER}
 echo "Downloading Tarball" ${TARBALL} "for amd64 from Flightradar24"
+sudo pacman -Sy --needed wget
 sudo wget -O ${RESOURCE_FOLDER}/${TARBALL} "https://repo-feed.flightradar24.com/linux_x86_64_binaries/${TARBALL}"
 
 sudo bsdtar -xvpf ${RESOURCE_FOLDER}/${TARBALL} -C ${RESOURCE_FOLDER}
