@@ -25,6 +25,7 @@
 sudo pacman -Sy --needed wget
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/ArchLinux-install-fr24feed_amd64.sh)"
 
+
 ## Option 2: fr24feed_1.0.25-3_i386
 sudo pacman -Sy --needed wget
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/ArchLinux-install-fr24feed_i386.sh)"
@@ -36,7 +37,7 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-a
 
 ```
 sudo pacman -Sy --needed wget
-sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/Archlinux-install-pfclient_4.1.1_i386.sh)"
+sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/Archlinux-install-pfclient-amd64.sh)"
 ``` 
 
 </br>
