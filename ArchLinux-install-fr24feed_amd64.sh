@@ -6,10 +6,16 @@ sudo mkdir ${RESOURCE_FOLDER}
 echo "Downloading Tarball" ${TARBALL} "for amd64 from Flightradar24"
 sudo pacman -Sy --needed wget
 sudo wget -O ${RESOURCE_FOLDER}/${TARBALL} "https://repo-feed.flightradar24.com/linux_x86_64_binaries/${TARBALL}"
-
 sudo bsdtar -xvpf ${RESOURCE_FOLDER}/${TARBALL} -C ${RESOURCE_FOLDER}
-
 sudo cp ${RESOURCE_FOLDER}/fr24feed_amd64/fr24feed /usr/bin/
+
+sudo wget -O ${RESOURCE_FOLDER}/init-functions https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/status/lsb/init-functions
+sudo mkdir -p /lib/lsb
+sudo cp ${RESOURCE_FOLDER}/init-functions /lib/lsb/
+
+sudo wget -O ${RESOURCE_FOLDER}/fr24feed-status https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/status/fr24feed-status
+sudo cp ${RESOURCE_FOLDER}/fr24feed-status /usr/bin/
+
 
 echo "Creating config file fr24feed.ini"
 CONFIG_FILE=/etc/fr24feed.ini
