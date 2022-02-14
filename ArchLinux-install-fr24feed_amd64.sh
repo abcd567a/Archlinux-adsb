@@ -14,6 +14,7 @@ sudo mkdir -p /lib/lsb
 sudo cp ${RESOURCE_FOLDER}/init-functions /lib/lsb/
 
 sudo wget -O ${RESOURCE_FOLDER}/fr24feed-status https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/status/fr24feed-status
+sudo chmod +x ${RESOURCE_FOLDER}/fr24feed-status
 sudo cp ${RESOURCE_FOLDER}/fr24feed-status /usr/bin/
 
 
