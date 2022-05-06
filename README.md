@@ -14,7 +14,7 @@
 
 ## (1) - Install Decoder - dump1090-fa </br>
 
-##  https://github.com/abcd567a/dump1090-fa-arch/blob/master/README.md
+##  https://github.com/abcd567a/archlinux-dump1090-fa/blob/master/README.md
 
 </br>
 
@@ -44,6 +44,6 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-a
 
 ## (4) - Install Flightaware feeder - piaware: </br>
 
-## https://github.com/abcd567a/piaware-arch/blob/main/README.md
+## https://github.com/abcd567a/archlinux-piaware/blob/main/README.md
 
 </br></br>
