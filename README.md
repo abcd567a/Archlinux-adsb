@@ -44,6 +44,6 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-a
 
 ## (4) - Install Flightaware feeder - piaware: </br>
 
-## https://github.com/abcd567a/archlinux-piaware/blob/main/README.md
+## https://github.com/abcd567a/archlinux-piaware/blob/master/README.md
 
 </br></br>
