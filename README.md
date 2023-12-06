@@ -29,6 +29,11 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-a
 ## Option 2: fr24feed_1.0.25-3_i386
 sudo pacman -Sy --needed wget
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/ArchLinux-install-fr24feed_i386.sh)"
+
+## Option 3: Fr24feed on Alarm Pi armhf and arm64
+
+sudo bash -c "$(wget -O - https://github.com/abcd567a/Archlinux-adsb/raw/master/AlarmPi-install-fr24feed.sh)"
+
 ``` 
 
 </br>
