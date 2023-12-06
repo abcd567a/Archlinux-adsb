@@ -16,7 +16,7 @@ wget -O ${BUILD_DIR}/fr24feed_${VERSION}_${ARCH}.deb http://repo-feed.flightrada
 
 EXT_DIR=${BUILD_DIR}/extracted
 mkdir ${EXT_DIR}
-bsdtar -xvpf ${BUILD_DIR}/fr24feed_${VERSION}_${ARCH}.deb -C ${BUILD_DIR}/extracted
+bsdtar -xvpf ${BUILD_DIR}/fr24feed_${VERSION}_${ARCH}.deb -C ${EXT_DIR}
 
 PKG_DIR=${BUILD_DIR}/pkg
 mkdir ${PKG_DIR}
