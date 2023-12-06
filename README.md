@@ -37,7 +37,7 @@ sudo bash -c "$(wget -O - https://github.com/abcd567a/Archlinux-adsb/raw/master/
 
 </br>
 
-## (3) - Install Planefinder feeder:</br>
+## (3) - Install Planefinder feeder pfclient_5.0.162_amd64 :</br>
 
 ```
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/Archlinux-install-pfclient-amd64.sh)"
@@ -46,7 +46,7 @@ sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-a
 
 </br>
 
-## (4) - Install Flightaware feeder - piaware: </br>
+## (4) - Install Flightaware feeder - piaware latest version: </br>
 
 ## https://github.com/abcd567a/archlinux-piaware/blob/master/README.md
 
