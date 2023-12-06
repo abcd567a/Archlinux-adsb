@@ -77,26 +77,17 @@ EOM
 
 sudo chmod 644 ${SERVICE_FILE}
 sudo systemctl enable fr24feed
-sudo fr24feed --signup
-sudo systemctl restart fr24feed
 
-echo " "
+sleep 5
+sudo fr24feed --signup
+echo -e "\e[1;32mRestarting fr24feed \e[0;39m"
+sleep 3
+sudo systemctl restart fr24feed
 echo " "
 echo -e "\e[1;32mINSTALLATION COMPLETED \e[0;39m"
 echo -e "\e[1;32m=======================\e[0;39m"
 echo -e "\e[1;32mPLEASE DO FOLLOWING:\e[0;39m"
 echo -e "\e[1;32m=======================\e[0;39m"
-echo -e "\e[1;32m(1) SIGNUP:\e[0;39m"
-echo -e "\e[1;32m   (a) If you already have a feeder key,\e[0;39m"
-echo -e "\e[1;33m       open file fr24feed.ini by following command and add fr24key:\e[0;39m"
-echo -e "\e[1;39m           sudo nano /etc/fr24feed.ini \e[0;39m"
-echo -e "\e[1;33m       Save (Ctrl+o) and Close (Ctrl+x) file fr24feed.ini \e[0;39m"
-echo -e "\e[1;33m       then restart fr24feed by following command:\e[0;39m"
-echo -e "\e[1;39m           sudo systemctl restart fr24feed \e[0;39m"
-echo " "
-
-echo -e "\e[1;32m   (b) Alternatively signup using following command\e[0;39m"
-echo -e "\e[1;39m         sudo fr24feed --signup \e[0;39m"
 echo " "
 echo -e "\e[1;32m(2) In your browser, go to web interface at\e[0;39m"
 echo -e "\e[1;39m     http://$(ip route | grep -m1 -o -P 'src \K[0-9,.]*'):8754 \e[0;39m"
@@ -105,4 +96,5 @@ echo " "
 echo -e "\e[1;32mTo see status\e[39m sudo systemctl status fr24feed"
 echo -e "\e[1;32mTo restart\e[39m    sudo systemctl restart fr24feed"
 echo -e "\e[1;32mTo stop \e[39m      sudo systemctl stop fr24feed"
-echo -e "\e[0;39m"
+
+echo -e "\e[0;39m "
