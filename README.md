@@ -19,19 +19,18 @@
 </br>
 
 ## (2) - Install FlightRadar24 feeder </br>
-
+### Option 1: fr24feed_1.0.44-0_amd64
 ```
-## Option 1: fr24feed_1.0.25-3_amd64
-sudo pacman -Sy --needed wget
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/ArchLinux-install-fr24feed_amd64.sh)"
+```
 
-
-## Option 2: fr24feed_1.0.25-3_i386
-sudo pacman -Sy --needed wget
+### Option 2: fr24feed_1.0.44-0_i386
+```
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/ArchLinux-install-fr24feed_i386.sh)"
+```
 
-## Option 3: Fr24feed on Alarm Pi armhf and arm64
-
+### Option 3: On Alarm Pi fr24feed_1.0.44-0_armhf and fr24feed_1.0.44-0_arm64
+```
 sudo bash -c "$(wget -O - https://github.com/abcd567a/Archlinux-adsb/raw/master/AlarmPi-install-fr24feed.sh)"
 
 ``` 
