@@ -24,6 +24,7 @@ bsdtar -xvpf ${EXT_DIR}/data.tar.gz -C ${PKG_DIR}
 
 install -Dm755  ${PKG_DIR}/usr/bin/fr24feed  /usr/bin/fr24feed
 install -Dm755  ${PKG_DIR}/usr/bin/fr24feed-status  /usr/bin/fr24feed-status
+install -Dm644  ${PKG_DIR}/etc/fr24feed.ini /etc/fr24feed.ini
 install -Dm644  ${PKG_DIR}/etc/systemd/system/fr24feed.service  /lib/systemd/system/fr24feed.service
 sed -i '/install_dump1090.sh/d' /lib/systemd/system/fr24feed.service
 install -Dm755  ${PKG_DIR}/usr/lib/fr24/create_missing_directories.sh /usr/lib/fr24/create_missing_directories.sh  
