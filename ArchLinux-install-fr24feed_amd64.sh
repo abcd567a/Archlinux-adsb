@@ -65,7 +65,7 @@ RuntimeDirectory=fr24feed
 RuntimeDirectoryMode=0755
 ExecStartPre=-/bin/mkdir -p /var/log/fr24feed
 ExecStartPre=-/bin/chown fr24 /var/log/fr24feed
-ExecStart=/usr/bin/fr24feed
+ExecStart=/usr/bin/fr24feed --monitor-file=/var/log/fr24feed/fr24feed.log
 User=fr24
 PermissionsStartOnly=true
 StandardOutput=null
