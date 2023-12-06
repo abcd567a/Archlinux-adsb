@@ -40,8 +40,8 @@ sudo bash -c "$(wget -O - https://github.com/abcd567a/Archlinux-adsb/raw/master/
 ## (3) - Install Planefinder feeder:</br>
 
 ```
-sudo pacman -Sy --needed wget
 sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/Archlinux-install-pfclient-amd64.sh)"
+
 ``` 
 
 </br>
