@@ -1,12 +1,12 @@
 #!/bin/bash
 
-TARBALL=fr24feed_1.0.25-3_amd64.tgz
+VERSION="1.0.44-0"
 RESOURCE_FOLDER=/usr/share/fr24feed
 sudo mkdir ${RESOURCE_FOLDER}
-echo "Downloading Tarball" ${TARBALL} "for amd64 from Flightradar24"
-sudo pacman -Sy --needed wget
-sudo wget -O ${RESOURCE_FOLDER}/${TARBALL} "https://repo-feed.flightradar24.com/linux_x86_64_binaries/${TARBALL}"
-sudo bsdtar -xvpf ${RESOURCE_FOLDER}/${TARBALL} -C ${RESOURCE_FOLDER}
+echo "Downloading Tarball fr24feed_"${VERSION}"_amd64.tgz for amd64 from Flightradar24"
+sudo pacman -S --needed wget
+sudo wget -O ${RESOURCE_FOLDER}/fr24feed_${VERSION}_amd64.tgz "https://repo-feed.flightradar24.com/linux_binaries/fr24feed_${VERSION}_amd64.tgz"
+sudo bsdtar -xvpf ${RESOURCE_FOLDER}/fr24feed_${VERSION}_amd64.tgz -C ${RESOURCE_FOLDER}
 sudo cp ${RESOURCE_FOLDER}/fr24feed_amd64/fr24feed /usr/bin/
 
 sudo wget -O ${RESOURCE_FOLDER}/init-functions https://raw.githubusercontent.com/abcd567a/Archlinux-adsb/master/status/lsb/init-functions
