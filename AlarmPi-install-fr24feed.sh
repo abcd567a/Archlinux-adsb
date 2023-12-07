@@ -30,6 +30,13 @@ sed -i '/install_dump1090.sh/d' /lib/systemd/system/fr24feed.service
 install -Dm755  ${PKG_DIR}/usr/lib/fr24/create_missing_directories.sh /usr/lib/fr24/create_missing_directories.sh  
 install -Dm755  ${PKG_DIR}/usr/lib/fr24/unregister_kernel_modules.sh /usr/lib/fr24/unregister_kernel_modules.sh
 
+if [[ -d /lib/lsb ]];
+then
+echo -e "\e[32mDirectory /lib/lsb existing, not creating again... \e[39m"
+else
+mkdir /lib/lsb
+fi
+wget -O /lib/lsb/init-functions https://github.com/abcd567a/Archlinux-adsb/raw/master/status/lsb/init-functions
 
 if [[ ! `id -u fr24` ]]; then
 echo "Creating user fr24 to run fr24feed"
